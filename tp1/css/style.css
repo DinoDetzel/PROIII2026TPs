@@ -3,10 +3,11 @@
     --color-negro: #000;
     --color-gris-oscuro: #1c1c1c;
     --color-gris: #222;
-    --color-acento: #ff5a1f; /* naranja/rojo del logo */
+    --color-acento: #ff5a1f;
+    /* naranja/rojo del logo */
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +23,7 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-    
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -38,8 +39,10 @@ body::before {
     width: 100%;
     height: 100%;
 
-    backdrop-filter: blur(4px); /* desenfoque suave */
-    background-color: rgba(0, 0, 0, 0.5); /* oscurece un poco */
+    backdrop-filter: blur(4px);
+    /* desenfoque suave */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* oscurece un poco */
 
     z-index: -1;
 }
@@ -50,7 +53,8 @@ body::before {
     padding: 30px;
     text-align: center;
 
-    position: relative; /* clave para posicionar el logo */
+    position: relative;
+    /* clave para posicionar el logo */
 }
 
 /* LOGO pegado a la izquierda */
@@ -178,7 +182,7 @@ body::before {
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -200,16 +204,16 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     background-color: #000;
     padding: 15px 40px;
-    
+
     border-bottom: 2px solid #ff5c00;
-    
+
     z-index: 1000;
 }
 
@@ -244,4 +248,161 @@ body::before {
     font-weight: bold;
     color: white;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.card {
+    background-color: rgba(28, 28, 28, 0.95);
+    border: 1px solid #333;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 540px;
+    padding: 40px 24px;
+    transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-acento);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
+}
+
+.card_title {
+    margin-bottom: 25px;
+    color: var(--color-acento);
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+}
+
+.card_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card_container label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #ddd;
+    font-weight: 600;
+}
+
+.card_container input[type="text"],
+.card_container input[type="tel"],
+.card_container input[type="date"],
+.card_container select,
+.card_container textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.card_container input[type="text"]:focus,
+.card_container input[type="tel"]:focus,
+.card_container input[type="date"]:focus,
+.card_container select:focus,
+.card_container textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.2);
+}
+
+.card_container textarea {
+    resize: vertical;
+    min-height: 120px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card_container input[type="submit"] {
+    margin-top: 10px;
+    padding: 12px 16px;
+    border: none;
+    background-image: linear-gradient(90deg, #ff5a1f, #ff3e6a);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.card_container input[type="submit"]:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+.days_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.days_container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.days_container input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.days_container label {
+    display: inline;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.card_container p {
+    margin-bottom: 10px;
+}
+
+/* Horario alignment */
+.card_container input[type="radio"] {
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.card_container label[for="manana"],
+.card_container label[for="tarde"],
+.card_container label[for="noche"] {
+    display: inline;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 880px) {
+
+    .servicio_contenedor,
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .card {
+        padding: 24px;
+    }
+}
+
+.card_container select {
+    background-color: var(--color-gris-oscuro);
+    color: #fff;
+}
+
+.card_container option {
+    background-color: var(--color-gris-oscuro);
+    color: #fff;
 }
