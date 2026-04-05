@@ -323,7 +323,9 @@ body::before {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.card_container input[type="submit"] {
+.card_container input[type="submit"],
+.card_container button[type="submit"],
+.card_container button[type="reset"] {
     margin-top: 10px;
     padding: 12px 16px;
     border: none;
@@ -336,7 +338,9 @@ body::before {
     transition: transform 0.2s, opacity 0.2s;
 }
 
-.card_container input[type="submit"]:hover {
+.card_container input[type="submit"]:hover,
+.card_container button[type="submit"]:hover,
+.card_container button[type="reset"]:hover {
     opacity: 0.95;
     transform: scale(1.02);
 }
@@ -405,4 +409,9 @@ body::before {
 .card_container option {
     background-color: var(--color-gris-oscuro);
     color: #fff;
+}
+
+.contacto_paragraph {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
 }

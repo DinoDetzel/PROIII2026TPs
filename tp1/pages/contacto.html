@@ -24,33 +24,37 @@
     </nav>
     <main class="servicio_main">
         <section class="servicio_section">
-            <h2 class="servicio_titulo">Contactanos</h2>
-            <p>Dejanos tu consulta y un asesor se pondrá en contacto contigo lo antes posible.</p>
+            <div class="servicio_contenedor">
+                <div class="card">
+                    <h2 class="servicio_titulo">Contactanos</h2>
+                    <p class="contacto_paragraph">Dejanos tu consulta y un asesor se pondrá en contacto contigo lo antes posible.</p>
 
-            <form class="contacto_form">
-                <div class="form_group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+                    <form class="card_container">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+                        </div>
 
-                <div class="form_group">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required>
-                </div>
+                        <div>
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" placeholder="Apellido" name="apellido" required>
+                        </div>
 
-                <div class="form_group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Email" name="email" required>
+                        </div>
 
-                <div class="form_group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                </div>
+                        <div>
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" placeholder="Escribe tu consulta aquí..." name="mensaje" rows="4" required></textarea>
+                        </div>
 
-                <div class="form_buttons">
-                    <button type="submit" class="btn_enviar">Enviar consulta</button>
-                    <button type="reset" class="btn_reset">Limpiar formulario</button>
+                        <div>
+                            <button type="submit" class="btn_submit">Enviar consulta</button>
+                            <button type="reset" class="btn_reset">Limpiar formulario</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </section>
