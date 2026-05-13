@@ -8,6 +8,14 @@ app.use(cors());
 app.use(express.json());
 
 
+// RUTA PRINCIPAL
+app.get('/', (req, res) => {
+
+    res.send('API funcionando');
+
+});
+
+
 // GET TODOS LOS SERVICIOS
 app.get('/servicios', async (req, res) => {
 
